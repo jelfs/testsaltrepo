@@ -1,51 +1,3 @@
-      hosts:
-        p3tlprx001.cloud.phx3.gdg:
-          role: [http-proxy]
-          floating_ip: 10.47.15.23
-          illumio_labels: [manual]
-        p3tlprx002.cloud.phx3.gdg:
-          role: [http-proxy]
-          floating_ip: 10.47.13.56
-          illumio_labels: [manual]
-
-    proxy-sin:
-      type: proxy
-      env: prod
-      net_zone: prd
-      vip_ip: 10.37.5.2
-      vip_fqdn: sinproxy.storage.int.gdcorp.tools
-      datacenter: sg2
-      hosts:
-        sg2plprx001.cloud.sin2.gdg:
-          role: [http-proxy]
-          floating_ip: 10.37.18.141
-          illumio_labels: [manual]
-        sg2plprx002.cloud.sin2.gdg:
-          role: [http-proxy]
-          floating_ip: 10.37.18.34
-          illumio_labels: [manual]
-
-    proxy-sxb:
-      type: proxy
-      env: prod
-      net_zone: prd
-      vip_ip: 10.47.38.3
-      vip_fqdn: sxbproxy.storage.int.gdcorp.tools
-      datacenter: sxb1
-      hosts:
-        sxb1plprx001.cloud.sxb1.gdg:
-          role: [http-proxy]
-          floating_ip: 10.47.54.19
-          illumio_labels: [manual]
-        sxb1plprx002.cloud.sxb1.gdg:
-          role: [http-proxy]
-          floating_ip: 10.47.54.33
-          illumio_labels: [manual]
-git/storage-ps-ceph-salt - (master) > 
-git/storage-ps-ceph-salt - (master) > 
-git/storage-ps-ceph-salt - (master) > clear
-
-git/storage-ps-ceph-salt - (master) > cat pillar/inventory/init.sls
 ---
 inventory:
   clusters:
@@ -8489,4 +8441,3 @@ inventory:
           role: [http-proxy]
           floating_ip: 10.47.54.33
           illumio_labels: [manual]
-git/storage-ps-ceph-salt - (master) > 
